@@ -2,6 +2,7 @@
 import Layout from '../layouts/default.astro';
 import ImageSlider from "../components/ImageSlider";
 import { Image } from "astro:assets";
+import IndoorImage from '../images/house/IMG-20230724-WA0007.jpg';
 ---
 
 <Layout title="Penzion Kamélie | Úvodní Stránka">
@@ -13,7 +14,7 @@ import { Image } from "astro:assets";
         <h1 class="text-3xl font-bold m-10">Ubytování v České Kamenici</h1>
         <div class="flex flex-row items-center gap-10">
 
-           <Image class="rounded-2xl select-none" src="/images/house/IMG-20230724-WA0007.jpg" alt="Obrázek vnitřka penzionu, na obrázku postel, skříň a další vybavení" height="450" width="600"/>
+           <Image class="rounded-2xl select-none" src={IndoorImage} alt="Obrázek vnitřka penzionu, na obrázku postel, skříň a další vybavení" height="450" width="600"/>
 
            <div class="flex flex-col gap-10 text-lg">
                <p class="max-w-xl text-justify">
