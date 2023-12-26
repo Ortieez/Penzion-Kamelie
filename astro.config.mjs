@@ -8,5 +8,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false
   },
+  site: 'https://ortieez.github.io',
+  base: '/Penzion-Kamelie',
   integrations: [tailwind(), react()]
 });
