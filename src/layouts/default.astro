@@ -1,0 +1,28 @@
+---
+import Header from '../components/header.astro';
+import { SEOMetadata } from 'astro-seo-metadata';
+import Footer from '../components/footer.astro';
+const { title } = Astro.props;
+---
+<html lang="cs">
+    <head>
+        <SEOMetadata
+            siteName={'Penzion Kamélie'}
+            description={'Le insightful description'}
+            image={'http://example.com/the_image_url-preferably_absolute.jpg'}
+            favicon={'/favicon.png'}
+            author="Adam Lipert"
+            astroSitemap={true}
+            canonicalUrl={Astro.url.toString()}
+            type={'website'}
+            astroGenerator={true}
+        />
+        <meta charset="utf-8" />
+        <title>{title}</title>
+    </head>
+    <body class="mx-4 mt-4">
+        <Header />
+        <slot />
+        <Footer />
+    </body>
+</html>

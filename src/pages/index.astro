@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/default.astro';
+import ImageSlider from "../components/ImageSlider";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Penzion Kamélie | Úvodní Stránka">
+    <div class="mt-10">
+        <ImageSlider client:load />
+    </div>
+
+    <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
+        <h1 class="text-3xl font-bold m-10">Ubytování v České Kamenici</h1>
+        <div class="flex flex-row items-center gap-10">
+
+           <Image class="rounded-2xl select-none" src="/images/house/IMG-20230724-WA0007.jpg" alt="Obrázek vnitřka penzionu, na obrázku postel, skříň a další vybavení" height="450" width="600"/>
+
+           <div class="flex flex-col gap-10 text-lg">
+               <p class="max-w-xl text-justify">
+                   <strong>PENZION Kamélie</strong> je nově otevřený penzion s ubytováním ve městě Česká Kamenice s ubytovací kapacitou (1 x 2 lůžkový)
+                   jednoho dvoulůžkového pokoje, (1 x 4 lůžkový +2) jednoho čtyřlůžkového pokoje s možností přistýlky pro dvě osoby.
+               </p>
+               <p class="max-w-xl text-justify">
+                   <strong>PENZION Kamélie</strong> nabízí ubytování 100 m od náměstí v klidném a příjemném prostředí, v rozlehlé zahradě zahradnictví Kamélie.
+                   Náš penzion je víc než se jen vyspat a jít dál, budete se u nás cítit jako doma.
+               </p>
+           </div>
+
+        </div>
+        <h2 class="text-2xl font-bold m-10">Navštivte náš PENZION KAMÉLIE, rádi Vás přivítáme.</h2>
+    </div>
+</Layout>
