@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Home page",
+    "description": "Some desc",
+    "text1": "Accommodation in Česká Kamenice",
+    "text2": "<0>PENZION Kamélie</0> is a newly opened guesthouse with accommodation in Česká Kamenice with accommodation capacity (1 x 2-bedded) one double room, (1 x 4-bedded +2) one four-bedded room with extra bed for two persons.",
+    "text3": "<0>PENZION Kamélie</0> offers accommodation 100 m from the square in a quiet and pleasant environment, in the large garden of the Kamélie gardening. Our guest house is more than just a place to sleep and move on, you will feel at home with us.",
+    "text4": "Visit our PENZION KAMÉLIE, we will be happy to welcome you."
+  },
+  "header": {
+    "main": "Homepage",
+    "pricelist": "Price list",
+    "housing": "Accommodation",
+    "other": "Other",
+    "photogallery": "Photo gallery",
+    "hikes": "Trips to the surroundings",
+    "map": "Map"
+  },
+  "footer": {
+    "text": "We invite you for year-round wanderings through the nature of Českokamenice, visit a part of the newly reconstructed Brothers' Altars under Jehla.",
+    "cz": "Czech Republic",
+    "ico": "CIN",
+    "phone": "Phone"
+  },
+  "loading": {
+    "loadingfirst": "Loading Pension",
+    "loadingImages": "Loading images in the pension",
+    "finished": "Have a nice stay"
+  }
+}

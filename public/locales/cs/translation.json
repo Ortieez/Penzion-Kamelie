@@ -1,0 +1,30 @@
+{
+  "home": {
+    "title": "Úvodní Stránka",
+    "description": "Nějaký úvod lol",
+    "text1": "Ubytování v České Kamenici",
+    "text2": "<strong>PENZION Kamélie</strong> je nově otevřený penzion s ubytováním ve městě Česká Kamenice s ubytovací kapacitou (1 x 2 lůžkový) jednoho dvoulůžkového pokoje, (1 x 4 lůžkový +2) jednoho čtyřlůžkového pokoje s možností přistýlky pro dvě osoby.",
+    "text3": "<strong>PENZION Kamélie</strong> nabízí ubytování 100 m od náměstí v klidném a příjemném prostředí, v rozlehlé zahradě zahradnictví Kamélie. Náš penzion je víc než se jen vyspat a jít dál, budete se u nás cítit jako doma.",
+    "text4": "Navštivte náš PENZION KAMÉLIE, rádi Vás přivítáme."
+  },
+  "header": {
+    "main": "Úvodní Stránka",
+    "pricelist": "Ceník",
+    "housing": "Ubytování",
+    "other": "Ostatní",
+    "photogallery": "Fotogalerie",
+    "hikes": "Výlety do okolí",
+    "map": "Mapa"
+  },
+  "footer": {
+    "text": "Zveme vás na celoroční toulky českokamenickou přírodou, navštivte část nově zrekonstruovaných Bratrských oltářů pod Jehlou.",
+    "cz": "Česká Republika",
+    "ico": "IČO",
+    "phone": "Mobil"
+  },
+  "loading": {
+    "loadingfirst": "Načítání penzionu",
+    "loadingImages": "Načítání obrazů v penzioně",
+    "finished": "Přejeme vám příjemný pobyt"
+  }
+}
