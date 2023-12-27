@@ -1,33 +1,40 @@
 ---
-import Layout from '../layouts/default.astro';
+import Layout from "../layouts/default.astro";
 import ImageSlider from "../components/ImageSlider";
 import { Image } from "astro:assets";
-import IndoorImage from '../images/house/IMG-20230724-WA0007.jpg';
+import IndoorImage from "../images/house/IMG-20230724-WA0007.jpg";
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+
+changeLanguage("cs");
 ---
 
-<Layout title="Penzion Kamélie | Úvodní Stránka">
+<Layout title={t("home.title")}>
     <div class="mt-10">
         <ImageSlider client:load />
     </div>
 
     <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
-        <h1 class="text-3xl font-bold m-10">Ubytování v České Kamenici</h1>
+        <h1 class="text-3xl font-bold m-10">{t("home.text1")}</h1>
         <div class="flex flex-row items-center gap-10">
 
            <Image class="rounded-2xl select-none" src={IndoorImage} alt="Obrázek vnitřka penzionu, na obrázku postel, skříň a další vybavení" height="450" width="600"/>
 
            <div class="flex flex-col gap-10 text-lg">
                <p class="max-w-xl text-justify">
-                   <strong>PENZION Kamélie</strong> je nově otevřený penzion s ubytováním ve městě Česká Kamenice s ubytovací kapacitou (1 x 2 lůžkový)
-                   jednoho dvoulůžkového pokoje, (1 x 4 lůžkový +2) jednoho čtyřlůžkového pokoje s možností přistýlky pro dvě osoby.
+                   <Trans i18nKey="home.text2">
+                       <strong>PENZION Kamélie</strong>
+                   </Trans>
+
                </p>
                <p class="max-w-xl text-justify">
-                   <strong>PENZION Kamélie</strong> nabízí ubytování 100 m od náměstí v klidném a příjemném prostředí, v rozlehlé zahradě zahradnictví Kamélie.
-                   Náš penzion je víc než se jen vyspat a jít dál, budete se u nás cítit jako doma.
+                   <Trans i18nKey="home.text3">
+                       <strong>PENZION Kamélie</strong>
+                   </Trans>
                </p>
            </div>
 
         </div>
-        <h2 class="text-2xl font-bold m-10">Navštivte náš PENZION KAMÉLIE, rádi Vás přivítáme.</h2>
+        <h2 class="text-2xl font-bold m-10">{t("home.text4")}</h2>
     </div>
 </Layout>

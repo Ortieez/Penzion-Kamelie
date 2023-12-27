@@ -3,10 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
+    "dev": "npx astro-i18next generate && astro dev",
+    "start": "npx astro-i18next generate && astro dev",
+    "build": "npx astro-i18next generate && astro check && astro build",
+    "preview": "npx astro-i18next generate && astro preview",
     "astro": "astro"
   },
   "dependencies": {
@@ -17,7 +17,9 @@
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.0.7",
+    "astro-i18next": "^1.0.0-beta.21",
     "astro-seo-metadata": "^0.6.0",
+    "ldrs": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "swiper": "^11.0.5",

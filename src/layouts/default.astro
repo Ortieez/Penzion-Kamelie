@@ -3,12 +3,14 @@ import Header from '../components/header.astro';
 import { SEOMetadata } from 'astro-seo-metadata';
 import Footer from '../components/footer.astro';
 const { title } = Astro.props;
+import i18next, { t } from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
 ---
-<html lang="cs">
+<html lang={i18next.language}>
     <head>
         <SEOMetadata
             siteName={'Penzion Kamélie'}
-            description={'Le insightful description'}
+            description={t("home.description")}
             image={'http://example.com/the_image_url-preferably_absolute.jpg'}
             favicon={'/Penzion-Kamelie/favicon.png'}
             author="Adam Lipert"
@@ -18,11 +20,72 @@ const { title } = Astro.props;
             astroGenerator={true}
         />
         <meta charset="utf-8" />
-        <title>{title}</title>
+        <title>Penzion Kamélie | {title}</title>
+        <HeadHrefLangs />
     </head>
-    <body class="mx-4 mt-4">
-        <Header />
-        <slot />
-        <Footer />
+    <body class="mx-4 mt-4  flex justify-center">
+        <div id="loading-overlay" class="fixed inset-0 bg-accent opacity-100 flex items-center flex-col justify-center z-50 transition-opacity duration-200">
+            <p class="text-3xl font-bold text-white">PENZION Kamélie</p>
+            <p class="text-white">
+                <span id="loadingFirst">{t("loading.loadingfirst")}</span>
+                <span class="hidden" id="loadingImages">{t("loading.loadingImages")}</span>
+                <span class="hidden" id="finished">{t("loading.finished")}</span>
+            </p>
+        </div>
+
+       <div class="container" id="content">
+           <Header />
+           <slot />
+           <Footer />
+       </div>
     </body>
+
+    <style>
+        body.loading {
+            overflow: hidden;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('loading');
+            let loaders1 = document.getElementById("loadingFirst")
+            let loaders2 = document.getElementById("loadingImages")
+
+            loaders1.classList.add("hidden");
+            loaders2.classList.remove("hidden");
+        })
+
+        window.addEventListener('load', function() {
+            let loaders2 = document.getElementById("loadingImages")
+            let loaders3 = document.getElementById("finished")
+
+            let images = document.getElementsByTagName('img');
+            let loadedImages = 0;
+
+            for (let i = 0; i < images.length; i++) {
+
+
+                images[i].addEventListener('load', function() {
+                    loadedImages++;
+                });
+
+                if (images[i].complete) {
+                    loadedImages++;
+                }
+            }
+
+            loaders2.classList.add("hidden");
+            loaders3.classList.remove("hidden");
+
+            setTimeout(function () {
+                document.getElementById('loading-overlay').style.opacity = 0;
+                document.getElementById('loading-overlay').style.pointerEvents = 'none';
+
+                document.getElementById('content').style.display = 'block';
+
+                document.body.classList.remove('loading');
+            }, 1500);
+        });
+    </script>
 </html>

@@ -1,7 +1,42 @@
 ---
 import {Image} from "astro:assets";
+let thisYear = new Date().getFullYear().toString();
+if (thisYear > "2023"){
+    thisYear = `2023 - ${thisYear}`
+}
+
+import { LanguageSelector } from "astro-i18next/components";
+import { t } from "i18next";
 ---
 
-<div class="shadow-even h-auto rounded-2xl my-10 flex justify-center flex-col items-center text-secondary">
-    "footer a zbytek dodelat zitra 27.12.2023"
-</div>
+<footer class="shadow-even h-auto rounded-2xl my-10 flex justify-center flex-col items-center text-secondary bg-accent p-10">
+    <div class="flex justify-between w-full">
+        <h3 class="text-3xl font-bold self-start">PENZION Kamélie</h3>
+        <LanguageSelector showFlag={false} class="bg-transparent focus:ring-0 ring-0 text-xl font-bold" />
+    </div>
+    <div class="grid grid-cols-5 mt-5 font-bold text-md">
+        <div>
+            Alena HÁLOVÁ<br/>
+            Mlýnská 43<br/>
+            407 21 Česká Kamenice<br/>
+            {t("footer.cz")}<br/>
+        </div>
+        <div></div>
+        <div class="flex justify-center">
+           <div>
+               {t("footer.ico")}: 15665658<br/>
+               E-mail: <a href="mailto:halova.alena@seznam.cz">halova.alena@seznam.cz</a><br/>
+               {t("footer.phone")}: <a href="tel:+420777940905">+420 777 940 905</a><br/>
+           </div>
+        </div>
+        <div></div>
+        <div>
+            <p>
+                <a href="http://www.luzicke-hory.cz/mista/index.php?pg=zmjehlc" target="_blank">
+                    {t("footer.text")}
+                </a>
+            </p>
+        </div>
+    </div>
+    <p class="mt-10"><small>&copy; Copyright {thisYear}, <a href="https://ortieez.com" target="_blank">Adam Lipert</a></small></p>
+</footer>
