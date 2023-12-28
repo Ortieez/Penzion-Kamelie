@@ -12,10 +12,57 @@ if (i18next.language != "cs") {
 
 <header id="stickyHeader" class="sticky top-0 z-10 bg-white shadow-even h-auto rounded-2xl flex justify-between font-bold">
     <a href={localizePath("/Penzion-Kamelie/")}>
-        <Image src={kamelieLogo} alt="Kamélie logo" height="100" width="250" class="p-5" />
+        <Image src={kamelieLogo} alt="Kamélie logo" height="100" width="250" class="p-5 select-none" />
     </a>
-    <nav class="flex items-center mr-5">
+    <nav class="max-lg:hidden flex items-center mr-5">
         <ul class="flex gap-10 text-lg text-primary ">
+            <li class="hover:text-secondary transition-colors duration-200">
+                <a href={localizePath("/Penzion-Kamelie/")}>{t("header.main")}</a>
+            </li>
+            <li class="hover:text-secondary transition-colors duration-200">
+                <a href={localizePath("/Penzion-Kamelie/#")}>{t("header.pricelist")}</a>
+            </li>
+            <li class="hover:text-secondary transition-colors duration-200">
+                <a href={localizePath("/Penzion-Kamelie/#")}>{t("header.housing")}</a>
+            </li>
+            <li class="hover:text-secondary transition-colors duration-200">
+                <a class="cursor-pointer">{t("header.other")}</a>
+            </li>
+            <li class="text-white hover:drop-shadow-xl transition-all duration-200">
+                <a class="bg-accent py-3 px-4 rounded-xl" href={link} target="_blank">
+                    Booking.com
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="lg:hidden flex items-center justify-end mr-10 cursor-pointer" id="hamburgerMenu">
+        <svg
+            id="hamburgerMenuIcon"
+            class="w-12 h-12"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+            />
+        </svg>
+
+        <svg id="closeMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 hidden">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+            />
+        </svg>
+    </div>
+
+    <nav class="hidden lg:hidden items-center mr-5 top-[110px] w-full absolute" id="mobileMenu">
+        <ul class="flex gap-8 text-lg text-primary flex-col z-20 bg-white w-full p-10 rounded-b-2xl">
             <li class="hover:text-secondary transition-colors duration-200">
                 <a href={localizePath("/Penzion-Kamelie/")}>{t("header.main")}</a>
             </li>
@@ -38,7 +85,7 @@ if (i18next.language != "cs") {
 </header>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    function handleStickyHeader() {
         let header = document.getElementById("stickyHeader");
         let lastScroll = 0;
 
@@ -54,5 +101,24 @@ if (i18next.language != "cs") {
 
             lastScroll = currentScroll;
         });
+    }
+
+    function handleHamburgerMenu() {
+        let hamburger = document.getElementById("hamburgerMenu");
+        let closeMenuIcon = document.getElementById("closeMenu");
+        let hamburgerMenuIcon = document.getElementById("hamburgerMenuIcon");
+        let mobileMenu = document.getElementById("mobileMenu");
+        hamburger.addEventListener("click", function() {
+            mobileMenu.classList.toggle("hidden");
+            mobileMenu.classList.toggle("flex");
+
+            hamburgerMenuIcon.classList.toggle("hidden");
+            closeMenuIcon.classList.toggle("hidden");
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        handleStickyHeader();
+        handleHamburgerMenu();
     });
 </script>
