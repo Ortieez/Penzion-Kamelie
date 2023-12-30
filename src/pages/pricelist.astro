@@ -1,0 +1,61 @@
+---
+import Layout from "../layouts/default.astro";
+import { Image } from "astro:assets";
+import IndoorImage from "../images/house/IMG-20230724-WA0012.jpg";
+import FamilyIndoorImage from "../images/house/IMG-20230724-WA0009.jpg";
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+
+changeLanguage("cs");
+---
+
+<Layout title={t("home.title")}>
+    <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
+        <h1 class="text-3xl font-bold m-10">{t("header.pricelist")}</h1>
+    </div>
+    <div class="max-xl:flex-col flex w-full gap-10 mt-5">
+        <div class="shadow-even h-auto rounded-2xl xl:w-1/2 mt-10 flex justify-center flex-col items-center text-secondary">
+            <h1 class="text-3xl font-bold mt-10">{t("pricelist.doublebed")}</h1>
+            <div class="flex flex-col items-center p-10">
+                <ul class="list-disc">
+                    <li>
+                        <p>600{t("pricelist.pricetemplate")}</p>
+                    </li>
+                    <li>
+                        <p class="my-5">{t("pricelist.pricetemplate2")} 500{t("pricelist.pricetemplate")}</p>
+                    </li>
+                </ul>
+                <Image class="rounded-2xl select-none" src={IndoorImage} alt="Obrázek vnitřka penzionu, na obrázku postel, skříň a další vybavení" height="450" width="600"/>
+            </div>
+        </div>
+
+        <div class="shadow-even h-auto rounded-2xl xl:w-1/2 mt-10 flex justify-center flex-col items-center text-secondary">
+            <h1 class="text-3xl font-bold mt-10">{t("pricelist.familyRoom")}</h1>
+            <div class="flex flex-col items-center p-10">
+                <ul class="list-disc">
+                    <li>
+                        <p>{t("pricelist.familyText")}</p>
+                    </li>
+                    <li>
+                        <p class="my-5">600{t("pricelist.pricetemplate")}</p>
+                    </li>
+                    <li>
+                        <p class="mb-5">{t("pricelist.pricetemplate2")} 500{t("pricelist.pricetemplate")}</p>
+                    </li>
+                </ul>
+                <Image class="rounded-2xl select-none" src={FamilyIndoorImage} alt="Obrázek vnitřka penzionu, na obrázku postel, skříň a další vybavení" height="450" width="600"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
+        <h1 class="text-3xl font-bold mt-10">{t("pricelist.notesTitle")}</h1>
+        <div class="flex flex-col items-center p-10 max-w-2xl">
+            <Trans i18nKey="pricelist.notes"><strong></strong></Trans>
+        </div>
+
+        <p>{t("pricelist.warning")}</p>
+
+        <h3 class="font-bold text-center text-2xl mt-5 mb-10">Těšíme se na Vaši návštěvu v našem penzionu!</h3>
+    </div>
+</Layout>

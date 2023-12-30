@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/default.astro";
+import { Image } from "astro:assets";
+import IndoorImage from "../images/house/IMG-20230724-WA0012.jpg";
+import FamilyIndoorImage from "../images/house/IMG-20230724-WA0009.jpg";
+import { t, changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+
+changeLanguage("cs");
+---
+
+<Layout title={t("home.title")}>
+    <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
+        <h1 class="text-3xl font-bold mt-10 mb-5">{t("header.housing")}</h1>
+        <ul class="p-10 flex flex-col items-start gap-10 list-disc max-w-3xl">
+            <Trans i18nKey="housing.text">
+                <strong>PENZION Kamélie</strong>
+            </Trans>
+        </ul>
+
+        <!-- Dodelat modal open popup -->
+        <!--<Trans i18nKey="housing.rules">-->
+        <!--    <strong>PENZION Kamélie</strong>-->
+        <!--</Trans>-->
+    </div>
+</Layout>
