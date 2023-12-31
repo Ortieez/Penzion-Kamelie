@@ -11,18 +11,36 @@ changeLanguage("en");
 
 <Layout title={t("home.title")}>
     <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
-        <h1 class="text-3xl font-bold m-10">{t("header.housing")}</h1>
-        <p>
-            V PENZIONU Kamélie
-            je možné ubytovat 8 osob, k dispozici je kuchyňka s vybavením, lednička, mikrovlnka, varná konvice, dvouvařič,  velká koupelna se sprchovým koutem, WC, automatická pračka.
+        <h1 class="text-3xl font-bold mt-10 mb-5">{t("header.housing")}</h1>
+        <ul class="p-10 flex flex-col items-start gap-10 list-disc max-w-3xl">
+            <Trans i18nKey="housing.text">
+                <strong>PENZION Kamélie</strong>
+            </Trans>
 
-            Ve velké společenské místnosti  PENZIONU Kamélie se můžete v klidu společně občerstvit nebo pobavit, třeba i při  svíčkách. Samozřejmostí je připojení k INTERNETU přes Wi-Fi.
+            <li class="underline text-accent cursor-pointer" id="showRules">Ubytovací řád penzionu Kamélie Česka Kamenice</li>
+        </ul>
 
-            Na zahradě můžete relaxovat, pro ty nejmenší i větší je k dispozici malé dětské hřiště. Na zahradě je i možnost stanování.
-
-            Při pěkném počasí můžete zchladit tělo v bazénu a večer si na terase prožít příjemné posezení s grilováním u jezírka.
-
-            V PENZIONU Kamélie je též možnost úschovy kol i lyží a parkování aut je v zahradě zdarma.
-        </p>
+        <dialog class="bg-white p-20 shadow-even rounded-2xl" id="rulesDialog">
+            <Trans i18nKey="housing.rules">
+                <strong class="list-decimal list-inside">PENZION Kamélie</strong>
+            </Trans>
+            <form method="dialog">
+                <button class="py-2 px-5 mt-5 bg-accent text-white rounded-2xl">Close</button>
+            </form>
+        </dialog>
     </div>
 </Layout>
+
+<script>
+    const openDialog = document.getElementById("showRules");
+    const dialog = document.getElementById("rulesDialog");
+    dialog.returnValue = "favAnimal";
+
+    function openCheck(dialog) {
+        return !dialog.open;
+    }
+
+    openDialog.addEventListener("click", () => {
+        if (openCheck(dialog)) dialog.showModal();
+    });
+</script>

@@ -25,8 +25,28 @@ if (i18next.language != "cs") {
             <li class="hover:text-secondary transition-colors duration-200">
                 <a href={localizePath("/accomodation")}>{t("header.housing")}</a>
             </li>
-            <li class="hover:text-secondary transition-colors duration-200">
-                <a class="cursor-pointer">{t("header.other")}</a>
+            <li id="openDropDown">
+                <a class="hover:text-secondary transition-colors duration-200 cursor-pointer group select-none">{t("header.other")}&nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#000" width="16" height="16" class="inline-block relative top-0 right-0 transform rotate-90 fill-primary group-hover:fill-secondary transition-colors duration-200" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+                    </svg>
+                </a>
+                <div id="dropdown" class="hidden absolute bg-white shadow-even rounded-xl w-52 mt-2 p-2 text-primary">
+                     <ul class="flex gap-5 text-lg text-primary flex-col p-2">
+                          <li class="hover:text-secondary transition-colors duration-200">
+                                <a href={localizePath("/trips")}>{t("header.hikes")}</a>
+                          </li>
+                         <li class="hover:text-secondary transition-colors duration-200">
+                             <a href={localizePath("/photo")}>{t("header.photogallery")}</a>
+                         </li>
+                         <li class="hover:text-secondary transition-colors duration-200">
+                             <a>{t("header.map")}</a>
+                         </li>
+                         <li class="hover:text-secondary transition-colors duration-200">
+                             <a>{t("header.contacts")}</a>
+                         </li>
+                     </ul>
+                </div>
             </li>
             <li class="text-white hover:drop-shadow-xl transition-all duration-200">
                 <a class="bg-accent py-3 px-4 rounded-xl" href={link} target="_blank">
@@ -117,8 +137,20 @@ if (i18next.language != "cs") {
         });
     }
 
+    function handleOpenDropDown() {
+        let openDropDown = document.getElementById("openDropDown");
+        let dropDown = document.getElementById("dropdown");
+
+        openDropDown.addEventListener("click", function() {
+            dropDown.classList.toggle("hidden");
+            dropDown.classList.toggle("flex");
+        });
+
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
         handleStickyHeader();
         handleHamburgerMenu();
+        handleOpenDropDown();
     });
 </script>

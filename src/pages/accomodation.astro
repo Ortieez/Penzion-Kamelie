@@ -16,11 +16,31 @@ changeLanguage("cs");
             <Trans i18nKey="housing.text">
                 <strong>PENZION Kamélie</strong>
             </Trans>
+
+            <li class="underline text-accent cursor-pointer" id="showRules">Ubytovací řád penzionu Kamélie Česka Kamenice</li>
         </ul>
 
-        <!-- Dodelat modal open popup -->
-        <!--<Trans i18nKey="housing.rules">-->
-        <!--    <strong>PENZION Kamélie</strong>-->
-        <!--</Trans>-->
+        <dialog class="bg-white p-20 shadow-even rounded-2xl" id="rulesDialog">
+            <Trans i18nKey="housing.rules">
+                <strong class="list-decimal list-inside my-2">PENZION Kamélie</strong>
+            </Trans>
+            <form method="dialog">
+                <button class="py-2 px-5 mt-5 bg-accent text-white rounded-2xl">Close</button>
+            </form>
+        </dialog>
     </div>
 </Layout>
+
+<script>
+    const openDialog = document.getElementById("showRules");
+    const dialog = document.getElementById("rulesDialog");
+    dialog.returnValue = "favAnimal";
+
+    function openCheck(dialog) {
+        return !dialog.open;
+    }
+
+    openDialog.addEventListener("click", () => {
+        if (openCheck(dialog)) dialog.showModal();
+    });
+</script>
