@@ -25,7 +25,6 @@ import Image24 from "../images/house/IMG-20230724-WA0024.jpg";
 import Image25 from "../images/house/IMG-20230724-WA0025.jpg";
 import Image26 from "../images/house/IMG-20230724-WA0026.jpg";
 import Image27 from "../images/house/IMG-20230724-WA0027.jpg";
-import Gallery from "react-photo-gallery";
 const allImages = [
     Image1,
     Image2,
@@ -55,18 +54,35 @@ const allImages = [
     Image26,
     Image27
 ]
-
-const imageObjects = allImages.map((image, index) => ({
-    src: image.src,
-    width: image.width,
-    height: image.height
-}))
-
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
+import {useEffect} from "react";
 
 export const ImageGallery = () => {
+    useEffect(() => {
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#photogallery',
+            children: 'a',
+            pswpModule: () => import('photoswipe'),
+        });
+        lightbox.init();
+    }, []);
+
     return (
         <>
-        {/*<Gallery photos={imageObjects} />*/}
-            </>
+            <div className="mt-10 flex flex-wrap justify-center gap-5" id="photogallery">
+                {allImages.map((image, index) => {
+                    return (
+                        <a href={image.src}
+                       data-pswp-width={image.width}
+                       data-pswp-height={image.height}
+                           key={index}
+                       target="_blank">
+                        <img src={image.src} className={"max-sm:w-full w-60 select-none"} width="240" height="180" alt=""/>
+                    </a>
+                )
+                })}
+            </div>
+        </>
     );
 };

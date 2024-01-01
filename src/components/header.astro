@@ -39,12 +39,6 @@ if (i18next.language != "cs") {
                          <li class="hover:text-secondary transition-colors duration-200">
                              <a href={localizePath("/photo")}>{t("header.photogallery")}</a>
                          </li>
-                         <li class="hover:text-secondary transition-colors duration-200">
-                             <a>{t("header.map")}</a>
-                         </li>
-                         <li class="hover:text-secondary transition-colors duration-200">
-                             <a>{t("header.contacts")}</a>
-                         </li>
                      </ul>
                 </div>
             </li>
@@ -83,17 +77,20 @@ if (i18next.language != "cs") {
 
     <nav class="hidden lg:hidden items-center mr-5 top-[110px] w-full absolute" id="mobileMenu">
         <ul class="flex gap-8 text-lg text-primary flex-col z-20 bg-white w-full p-10 rounded-b-2xl">
-            <li class="hover:text-secondary transition-colors duration-200">
+            <li class="select-none hover:text-secondary transition-colors duration-200">
                 <a href={localizePath("/Penzion-Kamelie/")}>{t("header.main")}</a>
             </li>
-            <li class="hover:text-secondary transition-colors duration-200">
+            <li class="select-none hover:text-secondary transition-colors duration-200">
                 <a href={localizePath("/Penzion-Kamelie/#")}>{t("header.pricelist")}</a>
             </li>
-            <li class="hover:text-secondary transition-colors duration-200">
+            <li class="select-none hover:text-secondary transition-colors duration-200">
                 <a href={localizePath("/Penzion-Kamelie/#")}>{t("header.housing")}</a>
             </li>
-            <li class="hover:text-secondary transition-colors duration-200">
-                <a class="cursor-pointer">{t("header.other")}</a>
+            <li class="select-none hover:text-secondary transition-colors duration-200">
+                <a href={localizePath("/trips")}>{t("header.hikes")}</a>
+            </li>
+            <li class="select-none hover:text-secondary transition-colors duration-200">
+                <a href={localizePath("/photo")}>{t("header.photogallery")}</a>
             </li>
             <li class="text-white hover:drop-shadow-xl transition-all duration-200">
                 <a class="bg-accent py-3 px-4 rounded-xl" href={link} target="_blank">

@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/default.astro";
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
+---
+
+<Layout title={t("home.title")}>
+    <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
+        <h1 class="text-3xl font-bold mt-10 mb-5">{t("header.hikes")}</h1>
+        <h2>{t("trips.title")}</h2>
+        <div class="max-w-7xl mt-5 flex flex-col-reverse lg:flex-row gap-5 p-8 lg:p-10 items-center">
+            <iframe class="lg:w-1/2 w-full" width="560" height="315" src="https://www.youtube-nocookie.com/embed/HcvLwQ90k4k?si=9IrQvOlKokA6t00n&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="flex flex-col gap-5 lg:w-1/2">
+                <p>
+                    {t("trips.text1")}
+                </p>
+                <p>
+                    {t("trips.text2")}
+                </p>
+                <p>
+                    {t("trips.text3")}
+                </p>
+            </div>
+        </div>
+    </div>
+</Layout>
