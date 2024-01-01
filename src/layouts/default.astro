@@ -11,7 +11,7 @@ import { HeadHrefLangs } from "astro-i18next/components";
         <SEOMetadata
             siteName={'Penzion Kamélie'}
             description={t("home.description")}
-            image={'http://example.com/the_image_url-preferably_absolute.jpg'}
+            image={"https://ortieez.github.io/Penzion-Kamelie/_astro/IMG-20230724-WA0001.E29lmCzK.jpg"}
             favicon={'/Penzion-Kamelie/favicon.png'}
             author="Adam Lipert"
             astroSitemap={true}
@@ -22,6 +22,8 @@ import { HeadHrefLangs } from "astro-i18next/components";
         <meta charset="utf-8" />
         <title>Penzion Kamélie | {title}</title>
         <HeadHrefLangs />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#DA7F93" />
     </head>
     <body class="mx-4 mt-4  flex justify-center">
         <div id="loading-overlay" class="fixed inset-0 bg-accent opacity-100 flex items-center flex-col justify-center z-50 transition-opacity duration-200">
@@ -35,7 +37,9 @@ import { HeadHrefLangs } from "astro-i18next/components";
 
        <div class="container" id="content">
            <Header />
-           <slot />
+           <main>
+               <slot />
+           </main>
            <Footer />
        </div>
     </body>

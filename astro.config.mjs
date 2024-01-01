@@ -1,8 +1,9 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import astroI18next from "astro-i18next";
-
 import react from "@astrojs/react";
+
+import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,5 +12,5 @@ export default defineConfig({
   },
   site: 'https://ortieez.github.io',
   base: '/Penzion-Kamelie',
-  integrations: [tailwind(), react(), astroI18next()]
+  integrations: [tailwind(), react(), astroI18next(), robotsTxt()]
 });

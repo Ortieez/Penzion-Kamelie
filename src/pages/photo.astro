@@ -6,7 +6,7 @@ import { t, changeLanguage } from "i18next";
 changeLanguage("cs");
 ---
 
-<Layout title="Fotogalerie">
+<Layout title={t("header.photogallery")}>
     <div class="shadow-even h-auto rounded-2xl mt-10 p-10 flex justify-center flex-col items-center text-secondary">
         <h1 class="text-3xl font-bold mt-10 mb-5">{t("header.photogallery")}</h1>
         <ImageGallery client:only="react" />

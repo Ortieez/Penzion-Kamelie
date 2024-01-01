@@ -9,7 +9,7 @@ import { Trans } from "astro-i18next/components";
 changeLanguage("cs");
 ---
 
-<Layout title={t("home.title")}>
+<Layout title={t("home.housing")}>
     <div class="shadow-even h-auto rounded-2xl mt-10 flex justify-center flex-col items-center text-secondary">
         <h1 class="text-3xl font-bold mt-10 mb-5">{t("header.housing")}</h1>
         <ul class="p-10 flex flex-col items-start gap-10 list-disc max-w-3xl">
@@ -17,7 +17,7 @@ changeLanguage("cs");
                 <strong>PENZION Kamélie</strong>
             </Trans>
 
-            <li class="underline text-accent cursor-pointer" id="showRules">Ubytovací řád penzionu Kamélie Česka Kamenice</li>
+            <li class="underline text-accent cursor-pointer" id="showRules">{t("housing.rulesTitle")}</li>
         </ul>
 
         <dialog class="bg-white p-20 shadow-even rounded-2xl" id="rulesDialog">
@@ -25,7 +25,7 @@ changeLanguage("cs");
                 <strong class="list-decimal list-inside my-2">PENZION Kamélie</strong>
             </Trans>
             <form method="dialog">
-                <button class="py-2 px-5 mt-5 bg-accent text-white rounded-2xl">Close</button>
+                <button class="py-2 px-5 mt-5 bg-accent text-white rounded-2xl">{t("housing.closeRules")}</button>
             </form>
         </dialog>
     </div>
@@ -34,7 +34,6 @@ changeLanguage("cs");
 <script>
     const openDialog = document.getElementById("showRules");
     const dialog = document.getElementById("rulesDialog");
-    dialog.returnValue = "favAnimal";
 
     function openCheck(dialog) {
         return !dialog.open;

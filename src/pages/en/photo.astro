@@ -1,8 +1,14 @@
 ---
-import { changeLanguage } from "i18next";
 import { ImageGallery } from "../../components/ImageGallery.tsx";
+import Layout from "../../layouts/default.astro";
+import { t, changeLanguage } from "i18next";
 
 changeLanguage("en");
 ---
 
-<ImageGallery client:load />
+<Layout title={t("header.photogallery")}>
+    <div class="shadow-even h-auto rounded-2xl mt-10 p-10 flex justify-center flex-col items-center text-secondary">
+        <h1 class="text-3xl font-bold mt-10 mb-5">{t("header.photogallery")}</h1>
+        <ImageGallery client:only="react" />
+    </div>
+</Layout>

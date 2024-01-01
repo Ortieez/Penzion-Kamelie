@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Home page",
-    "description": "Some desc",
+    "description": "PENZION Kamélie is a newly opened guesthouse with accommodation in Česká Kamenice.",
     "text1": "Accommodation in Česká Kamenice",
     "text2": "<0>PENZION Kamélie</0> is a newly opened guesthouse with accommodation in Česká Kamenice with accommodation capacity (1 x 2-bedded) one double room, (1 x 4-bedded +2) one four-bedded room with extra bed for two persons.",
     "text3": "<0>PENZION Kamélie</0> offers accommodation 100 m from the square in a quiet and pleasant environment, in the large garden of the Kamélie gardening. Our guest house is more than just a place to sleep and move on, you will feel at home with us.",
@@ -13,9 +13,7 @@
     "housing": "Accommodation",
     "other": "Other",
     "photogallery": "Photo gallery",
-    "hikes": "Trips to the surroundings",
-    "map": "Map",
-    "contacts": "Contacts"
+    "hikes": "Trips to the surroundings"
   },
   "footer": {
     "text": "We invite you for year-round wanderings through the nature of Českokamenice, visit a part of the newly reconstructed Brothers' Altars under Jehla.",
@@ -27,5 +25,28 @@
     "loadingfirst": "Loading Pension",
     "loadingImages": "Loading images in the pension",
     "finished": "Have a nice stay"
+  },
+  "pricelist": {
+    "doublebed": "Double room",
+    "familyRoom": "Family Suite",
+    "familyText": "Private bathroom outside the room (4+2 extra bed)",
+    "pricetemplate": "CZK / person / night",
+    "pricetemplate2": "3 or more nights",
+    "notesTitle": "Notes",
+    "notes": "<ul class=\"list-disc flex flex-col gap-2\"><li>Children under 1 year free of charge.</li><li>Free parking for guests of the guest house.</li><li>Free Wi-Fi.</li><li>Fully equipped kitchen. (valid for all guests)</li><li>Lounge with TV. (valid for all guests)</li><li>Children's playground.</li><li>Swimming pool.</li><li>Terrace with fireplace.</li><li>Garden.</li><li>We do not invade the privacy of our guests during their stay, if you wish to clean, change towels or refill toilet paper, please ask us.</li></ul>",
+    "warning": "The prices quoted are valid until 31.12.2024 and are subject to change without prior notice.",
+    "welcome": "We look forward to your visit in our guesthouse!"
+  },
+  "housing": {
+    "text": "<li>V <strong>PENZIONU Kamélie</strong> can accommodate 8 people, there is a kitchen with equipment, fridge, microwave, kettle, cooker, large bathroom with shower, toilet, automatic washing machine.</li><li>In the large common room of <strong>PENZIONU Kamélie</strong> you can enjoy a quiet meal or have fun together, even by candlelight. Of course there is an INTERNET connection via Wi-Fi.</li><li>You can relax in the garden, and there is a small playground for the little ones and bigger ones. Camping is also possible in the garden.</li><li>If the weather is nice, you can cool your body in the pool and in the evening enjoy a pleasant barbecue on the terrace by the pond.</li><li>In <strong>PENZION Kamélie</strong> also offers bicycle and ski storage and free car parking in the garden.</li>",
+    "rules": "<h2 class=\"text-2xl mb-5 font-bold\">Accommodation rules of the guesthouse</h2><h3 class=\"text-xl my-2 font-bold\">Introduction:</h3><ol class=\"list-decimal list-inside\"><li>These accommodation rules (after referred to as the \"Rules\") govern the conditions for providing accommodation services at the guesthouse.</li><li>The guesthouse provides accommodation services in accordance with applicable laws and based on the conclusion of an accommodation contract.</li><li>By staying at the guesthouse, the guest agrees to comply with these Rules and follow the instructions of the guesthouse staff.</li></ol><h3 class=\"text-xl my-2 font-bold\">I. Reservation and Accommodation Confirmation:</h3><ol class=\"list-decimal list-inside\"><li>Accommodation reservations can be made by phone, email.</li><li>To confirm the reservation, a deposit or advance payment for the accommodation will be required.</li></ol><h3 class=\"text-xl my-2 font-bold\">II. Check-in and Check-out:</h3><ol class=\"list-decimal list-inside\"><li>Check-in: Accommodation is available from 2:00 PM to 6:00 PM. If a later arrival is necessary, it should be communicated to the guesthouse in advance.</li><li>Check-out: Rooms must be vacated by 10:00 AM on the departure day.</li><li>Guests are required to present a valid identification document upon arrival.</li></ol><h3 class=\"text-xl my-2 font-bold\">III. Payments:</h3><ol class=\"list-decimal list-inside\"><li>The accommodation price is determined according to the current guesthouse price list.</li><li>Guests are obligated to settle the total amount for accommodation upon arrival or as agreed upon during the reservation.</li><li>Accepted payment methods include cash or bank transfer.</li></ol><h3 class=\"text-xl my-2 font-bold\">IV. Order and Quietness:</h3><ol class=\"list-decimal list-inside\"><li>Guests must observe order and quietness in the common areas of the guesthouse and inside the accommodation rooms from 10:00 PM to 7:00 AM.</li><li>Smoking is prohibited in enclosed areas of the guesthouse.</li><li>Consumption of food only in the common area.</li></ol><h3 class=\"text-xl my-2 font-bold\">V. Liability for Damages:</h3><ol class=\"list-decimal list-inside\"><li>Guests are responsible for any damage caused to the guesthouse property, whether caused intentionally or due to negligence.</li><li>The guesthouse reserves the right to claim compensation for damages caused by guests.</li></ol><h3 class=\"text-xl my-2 font-bold\">VI. Lost and Found:</h3><ol class=\"list-decimal list-inside\"><li>The guesthouse is not liable for lost or forgotten guest belongings.</li><li>Found items can be handed over to the guesthouse staff.</li></ol><h3 class=\"text-xl my-2 font-bold\">VII. Limitation of Liability:</h3><ol class=\"list-decimal list-inside\"><li>The guesthouse is not liable for any failures or malfunctions of technical equipment, water supply, or electrical circuits if they are caused by independent circumstances.</li></ol><h3 class=\"text-xl my-2 font-bold\">VIII. Termination of Accommodation:</h3><ol class=\"list-decimal list-inside\"><li>The guesthouse reserves the right to terminate the accommodation of a guest who repeatedly violates these Rules or behaves disruptively or aggressively towards other guests or staff.</li><li>In such a case, the guest is not entitled to a refund for unused accommodation.</li></ol><p>This accommodation rules are valid from the date of publication and are binding for all guesthouse guests. The guesthouse reserves the right to make changes to these Rules without prior notice.</p>",
+    "rulesTitle": "Accommodation rules of the pension Kamélie Česka Kamenice",
+    "closeRules": "Close"
+  },
+  "trips": {
+    "title": "Have you already planned your holiday this year?",
+    "text1": "Come on over. Česká Kamenice is a town on the border of three protected areas - the Elbe Sandstone Mountains, the Lusatian Mountains and the Bohemian Central Highlands. The very names of these localities tell us that you have somewhere to go. The Czech Switzerland, the newest national park, also invites to trips. You can do both hiking and cycling.",
+    "text2": "No less interesting are the cultural monuments of our town, for example: the Marian Chapel, the Church of St. James the Greater with a lookout tower.  On hot days you can use the beautiful swimming pool in Ceska Kamenice.",
+    "text3": "All details about the tours can be obtained at the information centre in the square."
   }
 }
